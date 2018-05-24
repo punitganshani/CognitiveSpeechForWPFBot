@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechClient", "Client\SpeechClient.csproj", "{3A7BD293-06B2-4A1F-A4A3-674E6B516637}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFramework.Speech", "BotFramework.Speech\BotFramework.Speech.csproj", "{EFBEBEF9-6F8A-4763-B170-A9D769B99772}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{3A7BD293-06B2-4A1F-A4A3-674E6B516637}.Release|x64.Build.0 = Release|Any CPU
 		{3A7BD293-06B2-4A1F-A4A3-674E6B516637}.Release|x86.ActiveCfg = Release|Any CPU
 		{3A7BD293-06B2-4A1F-A4A3-674E6B516637}.Release|x86.Build.0 = Release|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Debug|x64.Build.0 = Debug|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Debug|x86.Build.0 = Debug|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Release|x64.ActiveCfg = Release|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Release|x64.Build.0 = Release|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFBEBEF9-6F8A-4763-B170-A9D769B99772}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
