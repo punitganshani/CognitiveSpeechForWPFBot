@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,15 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Handlers\AdaptiveCardHandler.cs" />
-    <Compile Include="Handlers\HeroCardHandler.cs" />
     <Compile Include="AudioFormat.cs" />
     <Compile Include="Speech\Authentication.cs" />
     <Compile Include="Bot\BotSpeechClient.cs" />
     <Compile Include="DataEventArgs.cs" />
-    <Compile Include="Handlers\IAttachmentHandler.cs" />
-    <Compile Include="Handlers\ThumbnailHandler.cs" />
     <Compile Include="Bot\ActivityConverter.cs" />
+    <Compile Include="Ssml\AdaptiveCardMarkup.cs" />
+    <Compile Include="Ssml\BreakMarkup.cs" />
+    <Compile Include="Ssml\EmphasisMarkup.cs" />
+    <Compile Include="Ssml\HeroCardMarkup.cs" />
+    <Compile Include="Ssml\IMarkup.cs" />
+    <Compile Include="Ssml\InterpretAs.cs" />
+    <Compile Include="Ssml\ParagraphMarkup.cs" />
+    <Compile Include="Ssml\ProsodyMarkup.cs" />
+    <Compile Include="Ssml\SayAsMarkup.cs" />
+    <Compile Include="Ssml\SentenceMarkup.cs" />
+    <Compile Include="Ssml\TextMarkup.cs" />
+    <Compile Include="Ssml\ThumbnailCardMarkup.cs" />
     <Compile Include="SynthesisProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Speech\BingSpeech.cs" />
@@ -61,6 +68,9 @@
     <PackageReference Include="Microsoft.Bot.Connector.DirectLine">
       <Version>3.0.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Markdown\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

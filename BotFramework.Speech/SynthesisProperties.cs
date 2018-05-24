@@ -6,9 +6,10 @@ namespace BotFramework.Speech
     public class SynthesisProperties
     {
         public string SubscriptionKey { get; set; }
-        public SpeechGender Gender { get; set; }
         public string SpeechUri { get; set; }
         public string AuthenticationUri { get; set; }
+        public SpeechGender Gender { get; set; }
+      
         public string Locale { get; set; }
         public AudioFormat OutputFormat { get; set; }
         public string VoiceName { get; set; }

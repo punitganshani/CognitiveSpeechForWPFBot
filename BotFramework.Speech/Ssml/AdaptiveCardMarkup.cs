@@ -1,42 +1,40 @@
-﻿using AdaptiveCards;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Speech.Synthesis;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Xml.Linq;
+using AdaptiveCards;
 
-namespace BotFramework.Speech.Handlers
+namespace BotFramework.Speech.Ssml
 {
-    public class AdaptiveCardHandler : IAttachmentHandler<AdaptiveCard>
+    public class AdaptiveCardMarkup : IMarkup
     {
-        public void Process(AdaptiveCard ac, PromptBuilder builder)
-        {
-            foreach (var element in ac.Body)
-            {
-                GetStringFromAdaptiveCardElement(element, builder, 0);
-            }
+        private AdaptiveCard adaptiveCard;
 
-            foreach (var action in ac.Actions)
-            {
-                builder.AppendText($"{action.Title}");
-            }
+        public AdaptiveCardMarkup(AdaptiveCard adaptiveCard)
+        {
+            this.adaptiveCard = adaptiveCard;
         }
 
-        public void Process(JObject input, PromptBuilder builder)
+        public XNode ToSsml()
         {
-            throw new NotImplementedException();
+            var paragraph = new ParagraphMarkup();
+            foreach (var element in adaptiveCard.Body)
+            {
+                GetStringFromAdaptiveCardElement(element, paragraph, 0);
+            }
+
+            foreach (var action in adaptiveCard.Actions)
+            {
+                paragraph.AddSentence($"{action.Title}");
+            }
+
+            return paragraph.ToSsml();
         }
 
-        private static void GetStringFromAdaptiveCardElement(CardElement element, PromptBuilder builder, int depth)
+        private static void GetStringFromAdaptiveCardElement(CardElement element, ParagraphMarkup builder, int depth)
         {
             switch (element.Type)
             {
                 case "TextBlock":
                     TextBlock tb = element as TextBlock;
-                    string indent = new String(' ', depth);
-                    builder.AppendText($"{indent}{tb?.Text}");
+                    builder.AddSentence($"{tb?.Text}");
                     break;
                 case "ColumnSet":
                     ColumnSet cs = element as ColumnSet;
