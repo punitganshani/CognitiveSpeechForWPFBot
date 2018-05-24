@@ -32,11 +32,6 @@ namespace BotFramework.Speech
                 {
                     throw new Exception("Voicename has different Locale than the speech client");
                 }
-
-                if (!properties.VoiceName.Contains(properties.Gender.ToString()))
-                {
-                    throw new Exception("Voicename has different Gender than the speech client");
-                }
             }
         }
 
